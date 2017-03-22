@@ -33,9 +33,9 @@ namespace TestConsole
             //Contact contact = SQL.GetContactById("7");
             //Console.WriteLine(contact);
             Console.WriteLine("Ange ID nummer");
-            string inputID = Console.ReadLine();
+            string inputID = Console.ReadLine(); //ID är string??
 
-            Console.WriteLine(SQL.GetContactById("7"));
+            Console.WriteLine(SQL.GetContactById(inputID));
         }
 
         //private static List<Contact> SearchContactIDByName()
@@ -91,7 +91,8 @@ namespace TestConsole
 
             foreach (var contact in contacts)
             {
-                Console.WriteLine(contact.ToString());
+                //Console.WriteLine(contact.ToString());
+                contacts.Add(contact);
             }
 
             return contacts;
